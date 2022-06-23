@@ -22,6 +22,11 @@ describe Solver do
         factorial = @solver.factorial(1)
         expect(factorial).to eq(1)
       end
+      it 'If the input parameter is a negative integer, the argument returns an error' do
+        expect do
+          @solver.factorial(-5)
+        end.to raise_exception ArgumentError
+      end
     end
   end
 
