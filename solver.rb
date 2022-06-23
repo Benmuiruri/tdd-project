@@ -13,11 +13,11 @@ class Solver
 
   def fizzbuzz(num)
     case true
-    when num.modulo(5) == 0 && num.modulo(3) == 0
+    when num.modulo(5).zero? && num.modulo(3).zero?
       'fizzbuzz'
-    when num % 3 == 0
+    when (num % 3).zero?
       'fizz'
-    when num % 5 == 0
+    when (num % 5).zero?
       'buzz'
     else
       num

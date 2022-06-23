@@ -1,18 +1,18 @@
-require_relative '../solver.rb'
+require_relative '../solver'
 
 describe Solver do
   before :each do
     @solver = Solver.new
   end
 
-  context "Create @solver, an instance of class Solver" do
+  context 'Create @solver, an instance of class Solver' do
     it 'returns a Solver object' do
       expect(@solver).to be_instance_of Solver
     end
   end
 end
 
-describe "#factorial method" do
+describe '#factorial method' do
   before :each do
     @solver = Solver.new
   end
@@ -30,20 +30,20 @@ describe "#factorial method" do
   end
 end
 
-describe "#reverse method" do
+describe '#reverse method' do
   before :each do
     @solver = Solver.new
   end
 
   context 'Test the reverse method' do
     it 'should return the reverse of a string ' do
-      word = @solver.reverse("hello")
+      word = @solver.reverse('hello')
       expect(word).to eq('olleh')
     end
   end
 end
 
-describe "#fizzbuzz method" do
+describe '#fizzbuzz method' do
   before :each do
     @solver = Solver.new
   end
