@@ -29,3 +29,16 @@ describe "#factorial method" do
     end
   end
 end
+
+describe "#reverse method" do
+  before :each do
+    @solver = Solver.new
+  end
+
+  context 'Test the reverse method' do
+    it 'should return the reverse of a string ' do
+      word = @solver.reverse("hello")
+      expect(word).to eq('olleh')
+    end  
+  end
+end
