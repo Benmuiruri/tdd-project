@@ -1,9 +1,9 @@
 class Solver
-  def factorial(n)
-    return 1 if [0, 1].include?(n)
+  def factorial(num)
+    return 1 if [0, 1].include?(num)
 
     result = 1
-    (1..n).to_a.each { |num| result *= num }
+    (1..num).to_a.each { |number| result *= number }
     result
   end
 
@@ -12,7 +12,8 @@ class Solver
   end
 
   def fizzbuzz(num)
-    case true
+    result = true
+    case result
     when num.modulo(5).zero? && num.modulo(3).zero?
       'fizzbuzz'
     when (num % 3).zero?
