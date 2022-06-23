@@ -1,7 +1,8 @@
 class Solver
   def factorial(num)
-    raise ArgumentError unless num.is_a?(Integer) && num >= 0 
+    raise ArgumentError unless num.is_a?(Integer) && num >= 0
     return 1 if [0, 1].include?(num)
+
     result = 1
     (1..num).to_a.each { |number| result *= number }
     result
