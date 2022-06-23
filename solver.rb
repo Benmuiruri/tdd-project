@@ -6,4 +6,8 @@ class Solver
     (1..n).to_a.each { |num| result *= num }
     result
   end
+
+  def reverse(word)
+    word.reverse
+  end
 end
