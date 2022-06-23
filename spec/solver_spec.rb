@@ -41,31 +41,32 @@ describe "#reverse method" do
       expect(word).to eq('olleh')
     end
   end
+end
 
-  describe "#fizzbuzz method" do
-    before :each do
-      @solver = Solver.new
+describe "#fizzbuzz method" do
+  before :each do
+    @solver = Solver.new
+  end
+
+  context 'Test the fizzbuzz method' do
+    it 'should return the fizz' do
+      word = @solver.fizzbuzz(3)
+      expect(word).to eq('fizz')
     end
 
-    context 'Test the fizzbuzz method' do
-      it 'should return the fizz' do
-        word = @solver.fizzbuzz(3)
-        expect(word).to eq('fizz')
-      end
-
-      it 'should return the buzz' do
-        word = @solver.fizzbuzz(5)
-        expect(word).to eq('buzz')
-      end
-
-      it 'should return the fizzbuzz' do
-        fizz = @solver.fizzbuzz(15)
-        expect(word).to eq('fizzbuzz')
-      end
-
-      it 'should return the number' do
-        fizz = @solver.fizzbuzz(1)
-        expect(word).to eq(1)
-      end
+    it 'should return the buzz' do
+      word = @solver.fizzbuzz(5)
+      expect(word).to eq('buzz')
     end
+
+    it 'should return the fizzbuzz' do
+      word = @solver.fizzbuzz(15)
+      expect(word).to eq('fizzbuzz')
+    end
+
+    it 'should return the number' do
+      word = @solver.fizzbuzz(1)
+      expect(word).to eq(1)
+    end
+  end
 end

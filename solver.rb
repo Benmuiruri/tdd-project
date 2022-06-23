@@ -10,4 +10,17 @@ class Solver
   def reverse(word)
     word.reverse
   end
+
+  def fizzbuzz(num)
+    case true
+    when num.modulo(5) == 0 && num.modulo(3) == 0
+      'fizzbuzz'
+    when num % 3 == 0
+      'fizz'
+    when num % 5 == 0
+      'buzz'
+    else
+      num
+    end
+  end
 end
